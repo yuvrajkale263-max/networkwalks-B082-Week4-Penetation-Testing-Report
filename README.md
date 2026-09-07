@@ -146,7 +146,7 @@ The confirmed findings were documented with their description, impact, evidence,
 
 ---
 
-# 🐛 Security Findings
+# 🔒 Security Findings
 
 The penetration testing assessment identified multiple security weaknesses within the Mediroza environment. The confirmed findings are summarized below.
 
