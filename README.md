@@ -238,5 +238,76 @@ Supporting screenshots demonstrating the exposed employee salary and shareholder
 
 ---
 
+# ▥ Risk Rating Summary
 
+The identified vulnerabilities were assessed according to their potential impact on the confidentiality, integrity, and availability of the Mediroza environment.
 
+## Risk Overview
+
+| Finding | Security Issue | Severity | Risk |
+|---|---|---|---|
+| **M1** | Initial Access | High | Significant |
+| **M2** | Data Extraction | High | Significant |
+| **M3** | Critical Data Exposure | **Critical** | **Critical** |
+
+---
+
+## Risk Classification
+
+### 🔴 Critical
+
+**M3 – Critical Data Exposure**
+
+The exposure of sensitive employee salary information and shareholder information represents a critical confidentiality risk. The accessible information includes sensitive financial, employment, ownership, and organizational data.
+
+### 🟠 High / Significant
+
+**M1 - Initial Access**
+
+The initial access and subsequent data extraction findings demonstrate that weaknesses in the target environment could be used to progress from unauthorized access toward access to sensitive information.
+
+---
+
+## Overall Risk Assessment
+
+The assessment indicates that the identified vulnerabilities can have a significant impact on the confidentiality of sensitive Mediroza information.
+
+The most significant risk identified during the assessment was the exposure of sensitive employee and shareholder data. Appropriate access controls, authorization mechanisms, and protection of sensitive information should therefore be prioritized.
+
+> **Overall Priority:** Remediate the critical data exposure and address the vulnerabilities that enabled access to the affected information.
+
+# ➜ Recommendations & Remediation
+
+The following remediation actions are recommended based on the vulnerabilities confirmed during the Mediroza penetration testing assessment. Actions should be prioritized according to their potential impact and exploitability.
+
+### Priority 1 — Immediate
+
+- Remediate the confirmed **SQL Injection** vulnerability by implementing parameterized queries/prepared statements throughout the application.
+- Remove the exposed **old database backup (`mediroza_db_backup_2019.sql`)** from the publicly accessible web directory immediately.
+- Investigate the contents of the exposed database backup and determine whether any sensitive or outdated credentials/data could be abused.
+- Investigate whether the exposed backup was accessed or downloaded by unauthorized parties.
+- Disable unnecessary **directory listing/indexing** across the web server.
+- Immediately restrict unauthorized access to sensitive employee and shareholder information.
+- Review and secure all application endpoints that allow direct access to database-backed resources.
+- Store future database backups outside the web root, encrypt them, and restrict access to authorized personnel only.
+
+### Priority 2 — High
+
+- Strengthen authentication mechanisms using secure password hashing and appropriate credential-management controls.
+- Implement **Multi-Factor Authentication (MFA)** for sensitive accounts and administrative functionality where applicable.
+- Implement **rate limiting and account lockout controls** to reduce the risk of brute-force attacks.
+- Implement effective **CSRF protection** for state-changing requests.
+- Replace static or weak PDF/document passwords with strong, securely managed secrets and enforce application-level authorization before allowing document access.
+- Remove verbose database and application error messages from the production environment.
+- Ensure database errors are logged securely on the server without exposing implementation details to users.
+
+### Priority 3 — Medium / Low
+
+- Use generic authentication error messages to reduce the possibility of username/account enumeration.
+- Minimize technology and version disclosure through HTTP headers, server responses, and application-generated errors.
+- Remove unnecessary information from headers such as `Server` and `X-Powered-By`.
+- Implement security monitoring for failed authentication attempts, SQL injection patterns, suspicious requests, and unauthorized access to sensitive files.
+- Store database backups outside the publicly accessible web root.
+- Encrypt sensitive backups and restrict backup access to authorized personnel only.
+- Conduct periodic security assessments and penetration tests to identify newly introduced vulnerabilities.
+- Perform regression testing after remediation to confirm that the identified vulnerabilities have been fully resolved.
