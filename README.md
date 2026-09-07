@@ -15,7 +15,7 @@ Authorized penetration testing assessment of the Mediroza web application, docum
 
 - [Executive Summary](#-executive-summary)
 - [Scope & Methodology](#-scope--methodology)
-- [Tools Used](#-tools-used)
+- [Tools Used](#tools-used)
 - [Security Findings](#-security-findings)
 - [Risk Rating Summary](#-risk-rating-summary)
 - [Recommendations & Remediation](#-recommendations--remediation)
@@ -134,7 +134,7 @@ The confirmed findings were documented with their description, impact, evidence,
 
 ---
 
-# 🛠️ Tools Used
+#  Tools Used
 
 | Tool                       | Purpose                                          |
 | -------------------------- | ------------------------------------------------ |
