@@ -373,3 +373,61 @@ The M3 evidence demonstrates the exposure of sensitive information through the a
 The screenshots included in this repository have been redacted where necessary to reduce unnecessary exposure of sensitive information.
 
 The evidence is provided to demonstrate the vulnerabilities identified during the authorized assessment and to support the findings documented in the final penetration testing report.
+
+# ✦ Lessons Learned
+
+The Mediroza assessment provided practical insight into how multiple security weaknesses can contribute to broader security exposure when they are not adequately controlled.
+
+### Key Takeaways
+
+- **Authentication controls are critical:** Weaknesses in authentication can provide an attacker with an initial entry point into an application.
+- **Access control must be enforced server-side:** Sensitive resources should never be accessible solely because an endpoint or resource can be discovered.
+- **Sensitive documents require strong protection:** Password-protected documents should use strong, securely managed credentials and appropriate application-level authorization.
+- **Exposed backups create significant risk:** Database backups should never be placed in publicly accessible web directories.
+- **SQL Injection can expose large amounts of information:** Database-layer vulnerabilities can allow unauthorized access to sensitive records and should be addressed using secure query practices such as parameterized queries.
+- **Sensitive data exposure should be minimized:** Employee, financial, ownership, and other confidential information should only be accessible to users with a legitimate business requirement.
+- **Evidence-based validation is important:** Confirming vulnerabilities through controlled exploitation provides a clearer understanding of their actual security impact.
+- **Security should be approached holistically:** Authentication, authorization, application security, database security, data protection, and monitoring should work together rather than being treated as isolated controls.
+
+### Overall Lesson
+
+The assessment demonstrated how an attacker can progress from an initial weakness toward access to increasingly sensitive resources. Effective security therefore requires not only fixing individual vulnerabilities, but also reviewing how weaknesses can be chained together to affect the overall security posture.
+
+# ▰ Final deliverables
+
+| Assessment Stage | Key Outcome | Completion |
+|---|---|:---:|
+| **Reconnaissance** | Target surface and accessible resources identified | 🟢 Complete |
+| **Initial Access** | Authentication weakness validated and access established | 🟢 Complete |
+| **Patient Portal** | Unauthorized portal access demonstrated | 🟢 Complete |
+| **Document Retrieval** | Three patient reports successfully retrieved | 🟢 Complete |
+| **Document Security** | Passwords recovered | 🟢 Complete |
+| **Data Validation** | Recovered PDFs decrypted and verified | 🟢 Complete |
+| **Database Exposure** | Publicly accessible database backup identified | 🟢 Complete |
+| **Employee Data** | Salary information exposure validated | 🟢 Complete |
+| **Shareholder Data** | Ownership information exposure validated | 🟢 Complete |
+| **Evidence Collection** | Redacted screenshots and supporting evidence organized | 🟢 Complete |
+| **Risk Assessment** | Findings evaluated and prioritized | 🟢 Complete |
+| **Remediation** | Security recommendations documented | 🟢 Complete |
+| **Final Documentation** | Professional penetration testing report completed | 🟢 Complete |
+
+### Assessment Outcome
+
+The assessment objectives were completed, with technical findings validated and supporting evidence organized for review.
+
+# ! Disclaimer
+
+This repository documents an **authorized penetration testing assessment** performed against the Mediroza environment.
+
+The information presented, including technical findings, screenshots, and supporting evidence, is provided for **security assessment, documentation, and educational purposes**.
+
+### Authorized Use
+
+- All testing activities were performed within the defined assessment scope.
+- Testing was conducted for the purpose of identifying and validating security weaknesses.
+- Evidence has been redacted where necessary before being published publicly.
+- The techniques documented in this repository should only be used against systems for which explicit authorization has been obtained.
+
+### Responsible Disclosure
+
+The vulnerabilities and security issues documented in this repository are intended to support remediation and security improvement. Unauthorized exploitation of these techniques against systems without permission is strictly prohibited.
