@@ -5,9 +5,6 @@ Authorized penetration testing assessment of the Mediroza web application, docum
 
 > **Authorized Security Assessment | Penetration Testing Report**
 
-[![Security Assessment](https://img.shields.io/badge/Assessment-Penetration%20Testing-red)]()
-[![Platform](https://img.shields.io/badge/Platform-Web%20Application-blue)]()
-[![Status](https://img.shields.io/badge/Status-Completed-success)]()
 
 ---
 
