@@ -311,3 +311,73 @@ The following remediation actions are recommended based on the vulnerabilities c
 - Encrypt sensitive backups and restrict backup access to authorized personnel only.
 - Conduct periodic security assessments and penetration tests to identify newly introduced vulnerabilities.
 - Perform regression testing after remediation to confirm that the identified vulnerabilities have been fully resolved.
+
+# ⊙ Evidence
+
+Evidence was collected throughout the penetration testing assessment to validate the identified vulnerabilities and demonstrate their impact.
+
+All screenshots published in this repository have been reviewed and redacted where sensitive information was present.
+
+## Evidence Overview
+
+| Milestone | Evidence | Description |
+|---|---|---|
+| **M1 – Initial Access** | [`M1 Evidence`](./Screenshots/M1-Initial-Access/) | Authentication bypass, patient portal access, and access to patient reports. |
+| **M2 – Data Extraction** | [`M2 Evidence`](./Screenshots/M2-Data-Extraction/) | Access to three PDF reports and validation of their password protection. |
+| **M3 – Critical Data Exposure** | [`M3 Evidence`](./Screenshots/M3-Critical-Data-Exposure/) | Exposure of the database backup, employee salary data, and shareholder information. |
+
+---
+
+## M1 – Initial Access
+
+The M1 evidence demonstrates the initial access obtained during the assessment.
+
+| Evidence | Description |
+|---|---|
+| [`Authentication Bypass`](./Screenshots/M1-Initial-Access/M1_01_Authentication_Bypass(Redacted).png) | Evidence of the identified authentication bypass. |
+| [`Patient Portal`](./Screenshots/M1-Initial-Access/M1_02_Patient_Portal(Redacted).png) | Evidence of access to the patient portal. |
+| [`Three Patient Reports`](./Screenshots/M1-Initial-Access/M1_03_Three_Patient_Reports.png) | Evidence showing access to three patient reports. |
+
+---
+
+## M2 – Data Extraction
+
+The M2 evidence demonstrates access to the protected PDF documents and the password-cracking activity performed during the assessment.
+
+| Evidence | Description |
+|---|---|
+| [`PDF 1 – Access`](./Screenshots/M2-Data-Extraction/M2_01_PDF1_Access(Redacted).png) | Evidence of access to the first PDF document. |
+| [`PDF 1 – Password Crack`](./Screenshots/M2-Data-Extraction/M2_01_PDF1_Password_Crack(Redacted).png) | Evidence related to cracking the first PDF password. |
+| [`PDF 2 – Access`](./Screenshots/M2-Data-Extraction/M2_02_PDF2_Access(Redacted).png) | Evidence of access to the second PDF document. |
+| [`PDF 2 – Password Crack`](./Screenshots/M2-Data-Extraction/M2_02_PDF2_Password_Crack(Redacted).png) | Evidence related to cracking the second PDF password. |
+| [`PDF 3 – Access`](./Screenshots/M2-Data-Extraction/M2_03_PDF3_Access(Redacted).png) | Evidence of access to the third PDF document. |
+| [`PDF 3 – Password Crack`](./Screenshots/M2-Data-Extraction/M2_03_PDF3_Password_Crack(Redacted).png) | Evidence related to cracking the third PDF password. |
+
+---
+
+## M3 – Critical Data Exposure
+
+The M3 evidence demonstrates the exposure of sensitive information through the accessible database backup and SQL output.
+
+| Evidence | Description |
+|---|---|
+| [`Exposed Database Backup`](./Screenshots/M3-Critical-Data-Exposure/Database_Backup_Exposed(Redacted).png) | Evidence of the exposed database backup. |
+| [`Employee Salary SQL Output`](./Screenshots/M3-Critical-Data-Exposure/Salary_SQL_Output(Redacted).png) | Evidence showing the extracted employee salary information. |
+| [`Shareholder SQL Output`](./Screenshots/M3-Critical-Data-Exposure/Shareholders_SQL_Output(Redacted).png) | Evidence showing the extracted shareholder information. |
+
+### 📄 Readable Evidence
+
+The extracted M3 information has also been documented in readable text files:
+
+- `Employee-Salary-Details_Readable.txt`
+- `Shareholder-Details_Readable.txt`
+
+These files provide a structured representation of the data demonstrated through the M3 evidence.
+
+---
+
+## 🔐 Evidence Handling
+
+The screenshots included in this repository have been redacted where necessary to reduce unnecessary exposure of sensitive information.
+
+The evidence is provided to demonstrate the vulnerabilities identified during the authorized assessment and to support the findings documented in the final penetration testing report.
