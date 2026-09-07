@@ -336,7 +336,7 @@ The M1 evidence demonstrates the initial access obtained during the assessment.
 |---|---|
 | [`Authentication Bypass`](./Screenshots/M1-Initial-Access/M1_01_Authentication_Bypass(Redacted).png) | Evidence of the identified authentication bypass. |
 | [`Patient Portal`](./Screenshots/M1-Initial-Access/M1_02_Patient_Portal(Redacted).png) | Evidence of access to the patient portal. |
-| [`Three Patient Reports`](./Screenshots/M1-Initial-Access/M1_03_Three_Patient_Reports.png) | Evidence showing access to three patient reports. |
+| [`Three Patient Reports`](./Screenshots/M1-Initial-Access/M1_03_Three_Patient_Reports.png) | Evidence showing three patient reports retrieved. |
 
 ---
 
@@ -365,14 +365,6 @@ The M3 evidence demonstrates the exposure of sensitive information through the a
 | [`Employee Salary SQL Output`](./Screenshots/M3-Critical-Data-Exposure/Salary_SQL_Output(Redacted).png) | Evidence showing the extracted employee salary information. |
 | [`Shareholder SQL Output`](./Screenshots/M3-Critical-Data-Exposure/Shareholders_SQL_Output(Redacted).png) | Evidence showing the extracted shareholder information. |
 
-### 📄 Readable Evidence
-
-The extracted M3 information has also been documented in readable text files:
-
-- `Employee-Salary-Details_Readable.txt`
-- `Shareholder-Details_Readable.txt`
-
-These files provide a structured representation of the data demonstrated through the M3 evidence.
 
 ---
 
